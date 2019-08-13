@@ -7,15 +7,19 @@ public class FrontEnd implements Programmer{
 
     @Override
     public Program makeProgram(Paper paper) {
-        if(paper instanceof Client) {
-            Client pb = (Client) paper;
-            language = pb.language;
-            library = pb.library;
-        }
+        paper.setData(this);
         return makeFrontEndProgram();
     }
 
     private Program makeFrontEndProgram() {
         return new Program();
+    }
+
+    public void setLibrary(Library library) {
+        this.library = library;
+    }
+
+    public void setLanguage(Language language) {
+        this.language = language;
     }
 }

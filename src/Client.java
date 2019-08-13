@@ -12,4 +12,12 @@ public class Client implements Paper {
     }
 
 
+    @Override
+    public void setData(Programmer programmer) {
+        if(programmer instanceof FrontEnd) {
+            FrontEnd frontEnd = (FrontEnd)programmer;
+            frontEnd.setLibrary(library);
+            frontEnd.setLanguage(language);
+        }
+    }
 }

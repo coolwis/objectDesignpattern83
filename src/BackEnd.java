@@ -6,15 +6,22 @@ public class BackEnd  implements Programmer{
 
     @Override
     public Program makeProgram(Paper paper) {
-        if(paper instanceof ServerClient) {
-            ServerClient pa = (ServerClient) paper;
-            this.server = pa.server;
-            this.language = pa.backEndLanguage;
-        }
+        paper.setData(this);
+//        if(paper instanceof ServerClient) {
+//            ServerClient pa = (ServerClient) paper;
+//            this.server = pa.server;
+//            this.language = pa.backEndLanguage;
+//        }
         return makeBackEndProgram();
     }
 
     private Program makeBackEndProgram() {
         return new Program();
+    }
+
+    public void setLanguage(Language backEndLanguage) {
+    }
+
+    public void setServer(Server server) {
     }
 }

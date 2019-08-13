@@ -16,4 +16,17 @@ public class ServerClient implements Paper {
     public void setFrontEndProgrammer(Programmer frontEndProgrammer) {
         this.frontEndProgrammer = frontEndProgrammer;
     }
+
+    @Override
+    public void setData(Programmer programmer) {
+        if(programmer instanceof FrontEnd) {
+            FrontEnd frontEnd = (FrontEnd) programmer;
+            frontEnd.setLanguage(frontEndLanguage);
+        }
+        else if(programmer instanceof BackEnd) {
+            BackEnd backEnd = (BackEnd) programmer;
+            backEnd.setLanguage(backEndLanguage);
+            backEnd.setServer(server);
+        }
+    }
 }
