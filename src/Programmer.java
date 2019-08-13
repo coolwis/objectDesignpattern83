@@ -1,4 +1,11 @@
-public interface Programmer {
+public abstract class Programmer<T extends Paper> {
 
-    Program makeProgram(Paper paper);
+    public Program getProgram(T paper) {
+        setData(paper);
+        return makeProgram();
+    }
+
+    abstract void setData(T paper);
+
+    abstract Program makeProgram();
 }

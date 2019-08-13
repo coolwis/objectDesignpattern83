@@ -1,3 +1,3 @@
 public interface Paper {
-    void setData(Programmer programmer);
+    Program[] run();
 }
