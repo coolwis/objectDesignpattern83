@@ -9,6 +9,7 @@
 import Foundation
 
 class ServerClient: Paper {
+    
     let server = Server(name: "test")
     let backendLanguage = Language(name: "java")
     let frontendLanguage = Language(name: "kotlinJS")
@@ -23,6 +24,17 @@ class ServerClient: Paper {
     
     func setFrontEndProgrammer(programmer: Programmer) {
         self.frontendProgrammer = programmer
+    }
+    
+    func setData(programmer: Programmer) {
+        if programmer is FrontEnd {
+            let frontend = programmer as! FrontEnd
+            frontend.setLaunguage(language: frontendLanguage)
+        } else if programmer is BackEnd {
+            let backend = programmer as! BackEnd
+            backend.setLaunguage(language: backendLanguage)
+            backend.setServer(server: server)
+        }
     }
     
 }

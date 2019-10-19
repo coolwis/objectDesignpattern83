@@ -9,6 +9,8 @@
 import Foundation
 
 class Client: Paper {
+    
+    
     let library = Library(name: "vueJS")
     let language = Language(name: "kotlinJS")
     
@@ -16,5 +18,12 @@ class Client: Paper {
     
     func setProgrammer(programmer: Programmer) {
         self.programmer = programmer
+    }
+    func setData(programmer: Programmer) {
+        if programmer is FrontEnd {
+            let frontend = programmer as! FrontEnd
+            frontend.setLibrary(library: library)
+            frontend.setLaunguage(language: language)
+        }
     }
 }

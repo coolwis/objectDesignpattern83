@@ -8,4 +8,6 @@
 
 import Foundation
 
-protocol Paper { }
+protocol Paper {
+    func setData(programmer: Programmer)
+}
