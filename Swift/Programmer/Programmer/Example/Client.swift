@@ -8,22 +8,15 @@
 
 import Foundation
 
-class Client: Paper {
+protocol Client: Paper {
+    var library: Library? { get }
+    var language: Language? { get }
     
-    
-    let library = Library(name: "vueJS")
-    let language = Language(name: "kotlinJS")
-    
-    var programmer: Programmer?
-    
-    func setProgrammer(programmer: Programmer) {
+    var programmer: HasProgrammer? { get set }
+}
+
+extension Client {
+    mutating func setProgrammer(programmer: HasProgrammer) {
         self.programmer = programmer
-    }
-    func setData(programmer: Programmer) {
-        if programmer is FrontEnd {
-            let frontend = programmer as! FrontEnd
-            frontend.setLibrary(library: library)
-            frontend.setLaunguage(language: language)
-        }
     }
 }

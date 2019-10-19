@@ -8,37 +8,13 @@
 
 import Foundation
 
+protocol BackEnd: Programmer {
+    var server: Server? { get }
+    var language: Language? { get }
+}
 
-class BackEnd: Programmer {
-    private var server: Server?
-    private var language: Language?
-    
-    func makeProgram(paper: Paper) -> Program {
-        /*
-         BackEnd 도 마찬가지로 리스코프치환원칙을 위반하고 있다.
-         */
-//        if paper is ServerClient {
-//            let pb = paper as! ServerClient
-//            self.server = pb.server
-//            self.language = pb.backendLanguage
-//        }
-        // else 가 없으면 아무런 에러가 발생하지 않는다. (Context error 가 발생)
-        
-//        paper.setData(programmer: self)
-//        return makeBackEndProgram()
-        
-        return self.getProgram(paper: paper)
-    }
-    
-    func setServer(server: Server) {
-        self.server = server
-    }
-    
-    func setLaunguage(language: Language) {
-        self.language = language
-    }
-    
-    private func makeBackEndProgram() -> Program {
-       return Program()
+extension BackEnd {
+    func makeProgram() -> Program {
+        return Program()
     }
 }

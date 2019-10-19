@@ -8,33 +8,21 @@
 
 import Foundation
 
-class ServerClient: Paper {
+protocol ServerClient: Paper {
+    var server: Server { get }
+    var backendLanguage: Language { get }
+    var frontendLanguage: Language { get }
     
-    let server = Server(name: "test")
-    let backendLanguage = Language(name: "java")
-    let frontendLanguage = Language(name: "kotlinJS")
-    
-    private var backendProgrammer: Programmer?
-    private var frontendProgrammer: Programmer?
-    
-    
-    func setBackEndProgrammer(programmer: Programmer) {
+    var backendProgrammer: HasProgrammer? { get set }
+    var frontendProgrammer: HasProgrammer? { get set }
+}
+
+extension ServerClient {
+    mutating func setBackEndProgrammer(programmer: HasProgrammer) {
         self.backendProgrammer = programmer
     }
     
-    func setFrontEndProgrammer(programmer: Programmer) {
+    mutating func setFrontEndProgrammer(programmer: HasProgrammer) {
         self.frontendProgrammer = programmer
     }
-    
-    func setData(programmer: Programmer) {
-        if programmer is FrontEnd {
-            let frontend = programmer as! FrontEnd
-            frontend.setLaunguage(language: frontendLanguage)
-        } else if programmer is BackEnd {
-            let backend = programmer as! BackEnd
-            backend.setLaunguage(language: backendLanguage)
-            backend.setServer(server: server)
-        }
-    }
-    
 }
