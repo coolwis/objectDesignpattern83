@@ -25,6 +25,8 @@
 		BD677866235AA94900434B16 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD677865235AA94900434B16 /* Server.swift */; };
 		BD67786A235AAA2800434B16 /* FrontEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD677869235AAA2800434B16 /* FrontEnd.swift */; };
 		BD67786C235AAA9600434B16 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67786B235AAA9600434B16 /* Program.swift */; };
+		BD67786E235AADC800434B16 /* BackEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67786D235AADC800434B16 /* BackEnd.swift */; };
+		BD677870235AAEDC00434B16 /* Director.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67786F235AAEDC00434B16 /* Director.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		BD677865235AA94900434B16 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		BD677869235AAA2800434B16 /* FrontEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontEnd.swift; sourceTree = "<group>"; };
 		BD67786B235AAA9600434B16 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		BD67786D235AADC800434B16 /* BackEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEnd.swift; sourceTree = "<group>"; };
+		BD67786F235AAEDC00434B16 /* Director.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Director.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 				BD677862235AA6FC00434B16 /* Spec */,
 				BD677858235AA63500434B16 /* Paper.swift */,
 				BD67786B235AAA9600434B16 /* Program.swift */,
+				BD67786F235AAEDC00434B16 /* Director.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			children = (
 				BD67785A235AA64800434B16 /* Programmer.swift */,
 				BD677869235AAA2800434B16 /* FrontEnd.swift */,
+				BD67786D235AADC800434B16 /* BackEnd.swift */,
 			);
 			path = Programmer;
 			sourceTree = "<group>";
@@ -325,8 +331,10 @@
 				BD67785D235AA6B700434B16 /* Client.swift in Sources */,
 				BD67785B235AA64800434B16 /* Programmer.swift in Sources */,
 				BD677861235AA6E900434B16 /* Language.swift in Sources */,
+				BD67786E235AADC800434B16 /* BackEnd.swift in Sources */,
 				BD677859235AA63500434B16 /* Paper.swift in Sources */,
 				BD677864235AA92C00434B16 /* ServerClient.swift in Sources */,
+				BD677870235AAEDC00434B16 /* Director.swift in Sources */,
 				BD677866235AA94900434B16 /* Server.swift in Sources */,
 				BD677825235AA5FD00434B16 /* AppDelegate.swift in Sources */,
 				BD67785F235AA6C700434B16 /* Library.swift in Sources */,

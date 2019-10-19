@@ -23,6 +23,7 @@ class FrontEnd: Programmer {
             self.language = pb.language
             self.library = pb.library
         }
+        // else 가 없으면 아무런 에러가 발생하지 않는다. (Context error 가 발생)
         return makeFrontEndProgram()
     }
     
